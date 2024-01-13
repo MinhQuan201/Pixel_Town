@@ -1,6 +1,7 @@
 import { useMutation, useQuery } from 'convex/react';
-import { api } from '../../convex/_generated/api';
+
 import Button from './buttons/Button';
+import { api } from '../../convex/_generated/api';
 
 export default function FreezeButton() {
   const stopAllowed = useQuery(api.testing.stopAllowed) ?? false;
@@ -28,7 +29,7 @@ export default function FreezeButton() {
         title="Khi tạm dừng game, các nhân vật sẽ mất một thời gian để dừng việc họ đang làm trước khi bị tạm dừng."
         imgUrl="/assets/star.svg"
       >
-        {frozen ? 'Tạm dừng' : 'Tiếp tục'}
+        {frozen ? 'Tiếp tục' : 'Tạm dừng'}
       </Button>
     </>
   );
