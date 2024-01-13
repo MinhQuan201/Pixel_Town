@@ -1,16 +1,3 @@
-# Deployment used by `npx convex dev`
-
-CONVEX_DEPLOYMENT=dev:festive-hound-859 # team: zanrmh, project: pixel-town
-
-VITE_CONVEX_URL="https://festive-hound-859.convex.cloud"
-
-CLERK_ISSUER_URL=https://relieved-boar-92.clerk.accounts.dev/.well-known/jwks.json
-VITE_CLERK_PUBLISHABLE_KEY=pk_test_cmVsaWV2ZWQtYm9hci05Mi5jbGVyay5hY2NvdW50cy5kZXYk
-CLERK_SECRET_KEY=sk_test_fcxrIeaQFkJeMkav7KqA1ny2OCoHwrM7XhCMM6Vmdn
-
-OPENAI_API_KEY=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
-REPLICATE_API_TOKEN=r8_Ws6y3GcogQLKfZ6IKWV3pmXFE43lq6l1Upx65
-
 Pixel Town is a virtual town where AI characters live, chat and socialize.
 
 This project is a deployable starter kit for easily building and customizing your own version of Pixel Town. Inspired by the research paper [_Generative Agents: Interactive Simulacra of Human Behavior_](https://arxiv.org/pdf/2304.03442.pdf).
