@@ -1,6 +1,8 @@
-Chào mừng đến với Thị Trấn Pixel
-Pixel Town là một game mô phỏng những cuộc trò chuyện của con người. Những nhân vật trong đó được training tính cách và sở thích khác nhau, nhờ OpenAI để có thể tạo các cuộc hội thoại mới. Cuộc hội thoại sẽ được bắt đầu khi 2 nhân vật đến gần nhau.
-Kéo và thả chuột để di chuyển quanh thị trấn, cuộn chuột vào và ra để thu phóng. Bạn có thể nhập vào nhân vật để xem lịch sử trò chuyện của họ.
+- Chào mừng đến với Thị Trấn Pixel
+
+- Pixel Town là một game mô phỏng những cuộc trò chuyện của con người. Những nhân vật trong đó được training tính cách và sở thích khác nhau, nhờ OpenAI để có thể tạo các cuộc hội thoại mới. Cuộc hội thoại sẽ được bắt đầu khi 2 nhân vật đến gần nhau.
+
+- Kéo và thả chuột để di chuyển quanh thị trấn, cuộn chuột vào và ra để thu phóng. Bạn có thể nhập vào nhân vật để xem lịch sử trò chuyện của họ.
 
 ## Stack
 
@@ -14,10 +16,10 @@ Kéo và thả chuột để di chuyển quanh thị trấn, cuộn chuột vào
 
 ## Installation
 
-`npm run dev` will fail asking for environment variables.
-Enter them in the environment variables on your Convex dashboard to proceed.
-You can get there via `npx convex dashboard` or https://dashboard.convex.dev
-See below on how to get the various environment variables.
+- `npm run dev` will fail asking for environment variables.
+  Enter them in the environment variables on your Convex dashboard to proceed.
+  You can get there via `npx convex dashboard` or https://dashboard.convex.dev
+  See below on how to get the various environment variables.
 
 a. **OpenAI API key**
 
@@ -32,7 +34,6 @@ Add the token as `REPLICATE_API_TOKEN` in your Convex environment variables.
 
 c. **Convex**
 **To stop the back end, in case of too much activity**
-
 This will stop running the engine and agents. You can still run queries and
 run functions to debug.
 
@@ -46,22 +47,11 @@ npx convex run testing:stop
 npx convex run testing:resume
 ```
 
-**To kick the engine in case the game engine or agents aren't running**
-
-```bash
-npx convex run testing:kick
-```
-
 **To archive the world**
-
-If you'd like to reset the world and start from scratch, you can archive the current world:
 
 ```bash
 npx convex run testing:archive
 ```
-
-Then, you can still look at the world's data in the dashboard, but the engine and agents will
-no longer run.
 
 You can then create a fresh world with `init`.
 
@@ -70,14 +60,11 @@ npx convex run init
 ```
 
 **To clear all databases**
-
 You can wipe all tables with the `wipeAllTables` testing function.
 
 ```bash
 npx convex run testing:wipeAllTables
 ```
-
-### Deploy the app
 
 #### Deploy to Vercel
 
