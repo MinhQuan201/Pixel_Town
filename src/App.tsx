@@ -1,13 +1,12 @@
+import Button from './components/buttons/Button.tsx';
+import FreezeButton from './components/FreezeButton.tsx';
 import Game from './components/Game.tsx';
-
+import { MAX_HUMAN_PLAYERS } from '../convex/constants.ts';
+import MusicButton from './components/buttons/MusicButton.tsx';
+import ReactModal from 'react-modal';
 import { ToastContainer } from 'react-toastify';
 import helpImg from '../assets/help.svg';
 import { useState } from 'react';
-import ReactModal from 'react-modal';
-import MusicButton from './components/buttons/MusicButton.tsx';
-import Button from './components/buttons/Button.tsx';
-import FreezeButton from './components/FreezeButton.tsx';
-import { MAX_HUMAN_PLAYERS } from '../convex/constants.ts';
 
 export default function Home() {
   const [helpModalOpen, setHelpModalOpen] = useState(false);
@@ -21,7 +20,7 @@ export default function Home() {
         ariaHideApp={false}
       >
         <div className="font-body">
-          <h1 className="text-center text-6xl font-bold font-display game-title">Ho Tro</h1>
+          <h1 className="text-center text-6xl font-bold font-display game-title">Giai Dap</h1>
           <p className="text-3xl">Chào mừng đến với Thị Trấn Pixel (Pixel Town).</p>
           <h2 className="text-4xl mt-4 game-title">Giới thiệu:</h2>
           <p className="text-2xl">
@@ -55,7 +54,7 @@ export default function Home() {
             <FreezeButton />
             <MusicButton />
             <Button imgUrl={helpImg} onClick={() => setHelpModalOpen(true)}>
-              Hỗ trợ
+              Giải Đáp
             </Button>
           </div>
         </footer>
