@@ -1,4 +1,4 @@
-- Chào mừng đến với Thị Trấn Pixel
+Chào mừng đến với Thị Trấn Pixel
 
 - Pixel Town là một game mô phỏng những cuộc trò chuyện của con người. Những nhân vật trong đó được training tính cách và sở thích khác nhau, nhờ OpenAI để có thể tạo các cuộc hội thoại mới. Cuộc hội thoại sẽ được bắt đầu khi 2 nhân vật đến gần nhau.
 
