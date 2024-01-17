@@ -47,16 +47,16 @@ npx convex run testing:stop
 npx convex run testing:resume
 ```
 
-**To archive the world**
-
-```bash
-npx convex run testing:archive
-```
-
 You can then create a fresh world with `init`.
 
 ```bash
 npx convex run init
+```
+
+**To archive the world**
+
+```bash
+npx convex run testing:archive
 ```
 
 **To clear all databases**
