@@ -1,9 +1,11 @@
-import { defineTable } from 'convex/server';
-import { v } from 'convex/values';
-import { ActionCtx, internalMutation, internalQuery } from '../_generated/server';
-import { internal } from '../_generated/api';
 import * as openai from '../util/openai';
+
+import { ActionCtx, internalMutation, internalQuery } from '../_generated/server';
+
 import { Id } from '../_generated/dataModel';
+import { defineTable } from 'convex/server';
+import { internal } from '../_generated/api';
+import { v } from 'convex/values';
 
 // Đoạn code này xử lý việc lưu trữ và truy xuất các biểu diễn vector (embedding) của văn bản, được sử dụng để biểu diễn và so sánh ý nghĩa của văn bản trong các ứng dụng máy học.
 //Nó sử dụng một bộ nhớ đệm (cache) để lưu trữ các embedding đã được tính toán trước đó, giúp tăng tốc độ truy xuất và giảm tải cho các dịch vụ bên ngoài như OpenAI.

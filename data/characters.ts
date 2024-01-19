@@ -7,6 +7,7 @@ import { data as f6SpritesheetData } from './spritesheets/f6';
 import { data as f7SpritesheetData } from './spritesheets/f7';
 import { data as f8SpritesheetData } from './spritesheets/f8';
 
+/*làm thành các cuộc hội thoại*/
 export const Descriptions = [
   {
     name: 'Quân',
