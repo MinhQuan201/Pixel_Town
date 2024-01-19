@@ -5,9 +5,6 @@ first start with a brief overview and then go in-depth on each component. The ov
 be sufficient for forking Pixel Town and changing game or agent behavior. Read on to the deep dives
 if you're interested or running up against the engine's limitations.
 
-This doc assumes the reader has a working knowledge of Convex. If you're new to Convex, check out
-the [Convex tutorial](https://docs.convex.dev/get-started) to get started.
-
 ## Overview
 
 Pixel Town is split into a few layers:
