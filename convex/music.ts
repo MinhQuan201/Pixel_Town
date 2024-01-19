@@ -1,8 +1,9 @@
-import { v } from 'convex/values';
-import { query, internalMutation } from './_generated/server';
 import Replicate, { WebhookEventType } from 'replicate';
+import { api, internal } from './_generated/api';
 import { httpAction, internalAction } from './_generated/server';
-import { internal, api } from './_generated/api';
+import { internalMutation, query } from './_generated/server';
+
+import { v } from 'convex/values';
 
 function client(): Replicate {
   const replicate = new Replicate({
@@ -14,7 +15,7 @@ function client(): Replicate {
 function replicateAvailable(): boolean {
   return !!process.env.REPLICATE_API_TOKEN;
 }
-
+/*Tạo một mutation để thêm nhạc vào database*/
 export const insertMusic = internalMutation({
   args: { storageId: v.string(), type: v.union(v.literal('background'), v.literal('player')) },
   handler: async (ctx, args) => {
@@ -24,7 +25,7 @@ export const insertMusic = internalMutation({
     });
   },
 });
-
+/*Định nghĩa một query để lấy URL của nhạc nền hiện tại. */
 export const getBackgroundMusic = query({
   handler: async (ctx) => {
     const music = await ctx.db
@@ -42,7 +43,7 @@ export const getBackgroundMusic = query({
     return url;
   },
 });
-
+/*Định nghĩa một action để khởi tạo quá trình tạo nhạc nền*/
 export const enqueueBackgroundMusicGeneration = internalAction({
   handler: async (ctx): Promise<void> => {
     if (!replicateAvailable()) {
@@ -57,7 +58,7 @@ export const enqueueBackgroundMusicGeneration = internalAction({
     await generateMusic('16-bit RPG adventure game with wholesome vibe', 30);
   },
 });
-
+/*cố định để sử dụng trong việc tạo nhạc và xử lý âm thanh.*/ 
 export const handleReplicateWebhook = httpAction(async (ctx, request) => {
   const req = await request.json();
   if (req.id) {

@@ -1,9 +1,12 @@
-import { BaseTexture, ISpritesheetData, Spritesheet } from 'pixi.js';
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { AnimatedSprite, Container, Graphics, Text } from '@pixi/react';
 import * as PIXI from 'pixi.js';
 
-//đoạn code ReactJS kết hợp với thư viện PixiJS để tạo ra một nhân vật có thể di chuyển và tương tác trong một môi trường 2D
+import { AnimatedSprite, Container, Graphics, Text } from '@pixi/react';
+import { BaseTexture, ISpritesheetData, Spritesheet } from 'pixi.js';
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+// ReactJS kết hợp với thư viện PixiJS để tạo ra một nhân vật
+//có thể di chuyển và tương tác trong một môi trường 2D
+// dự liệu pixijs những cái tọa độ x,y nó sẽ tạo ra hướng của nhân vật với tốc độ hoạt ảnh
 export const Character = ({
   textureUrl,
   spritesheetData,

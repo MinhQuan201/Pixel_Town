@@ -1,13 +1,15 @@
-import { v } from 'convex/values';
-import { Id } from '../_generated/dataModel';
-import { ActionCtx, internalQuery } from '../_generated/server';
-import { LLMMessage, chatCompletion } from '../util/openai';
-import * as memory from './memory';
-import { api, internal } from '../_generated/api';
 import * as embeddingsCache from './embeddingsCache';
-import { GameId, conversationId, playerId } from '../pixelTown/ids';
+import * as memory from './memory';
 
-// cuộc hội thoại
+import { ActionCtx, internalQuery } from '../_generated/server';
+import { GameId, conversationId, playerId } from '../pixelTown/ids';
+import { LLMMessage, chatCompletion } from '../util/openai';
+import { api, internal } from '../_generated/api';
+
+import { Id } from '../_generated/dataModel';
+import { v } from 'convex/values';
+
+// tao cuộc hội thoại
 
 const selfInternal = internal.agent.conversation;
 

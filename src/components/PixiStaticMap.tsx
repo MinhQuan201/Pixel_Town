@@ -1,11 +1,12 @@
-import { PixiComponent, applyDefaultProps } from '@pixi/react';
 import * as PIXI from 'pixi.js';
-import { AnimatedSprite, WorldMap } from '../../convex/pixelTown/worldMap';
 import * as campfire from '../../data/animations/campfire.json';
 import * as gentlesparkle from '../../data/animations/gentlesparkle.json';
-import * as gentlewaterfall from '../../data/animations/gentlewaterfall.json';
 import * as gentlesplash from '../../data/animations/gentlesplash.json';
+import * as gentlewaterfall from '../../data/animations/gentlewaterfall.json';
 import * as windmill from '../../data/animations/windmill.json';
+
+import { AnimatedSprite, WorldMap } from '../../convex/pixelTown/worldMap';
+import { PixiComponent, applyDefaultProps } from '@pixi/react';
 // Thành phần này chịu trách nhiệm hiển thị một bản đồ tĩnh trong trò chơi sử dụng thư viện PixiJS.
 // Nó kết hợp các lớp nền, các đối tượng tĩnh, và các đối tượng động (hoạt ảnh).
 const animations = {
